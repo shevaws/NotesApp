@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register', function () {
+    return view('register');
+});
+
 Route::middleware(['auth'])->group(function () {
     Route::resource('notes', NoteController::class);
 });
